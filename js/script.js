@@ -1,72 +1,108 @@
- //***1***
-// Робота зі змінними
-// Оголосіть дві змінні: name та city.
-// Присвойте значення "Іван" змінній name.
-// Скопіюйте значення зі змінної name в city.
-// Виведіть значення змінної city, використовуючи функцію console.log (яка повинна показати “Іван”).
+// Якщо змінна більше нуля - виведіть true, менше - false
+//Перевірте це на варіантах  1, 0, -3.
+/*
+let value = -3;
 
-/*let name = "Ivan";
-let city = "Lviv";
-city = name;
-console.log(cit);*/
+if (value > 0) {
+    console.log("true");
+} else if (value < 0) {
+    console.log("false");
+} else {
+    console.log("0");
+}*/
 
-//***2***
-//Який буде результат виконання скрипта?
-//let name = "Olga";
-// console.log(`привіт ${1}`); //1
-//console.log(`привіт ${"name"}`); привіт name
-// console.log(`привіт ${name}`); // привіт Olga
+// Якщо змінна ="test" - виведіть true,
+//Перевірте це на варіантах  'test', "qwerty", true
+/*
+let value = "aedea";
+value == "test" ? console.log("true") : console.log("false");
+*/
 
-//***3***
-//Видобути число зі змінних
-//let a = "5";
-//let b = "13cvb";
-//let c = "12.9sxdcfgv";
-// вивести в консоль тип
+// Якщо змінна більше 10 -  відніміть 5,
+//менше - додайте 5, результат виведіть в консоль
+//Перевірте це на варіантах  1, 10, 13.
+/*
+let value = 15;
 
-/*console.log(typeof parseInt(b));
-console.log(typeof parseInt(c));*/
-
-//***4***
-//Зробіть, щоб 0.1 + 0.2 = 0.3
-//console.log((0.1*10 + 0.2*10) / 10);
-
-//***5**
-//Поверніть найбільше число с набору 20, 10, 50, 40
-//console.log(Math.max(45, 50, 78, 3));
-
-//***6**
-//Поверніть випадкове число в діапазоні від 2 до 4
-//console.log(Math.random(4 - 2)*2);
-
-//***7**
-//дізнатись довжину message
-//const message = "Welcome to Bahamas!";
-//console.log(message.length);
-
-//***8**
-//вивести в консоль message  великими літерами
-//console.log(message.toUpperCase())
-
-//***9**
-// створити пустий об*єкт
-// додати туди ім*я, вік і місто
-// вивести результат в консоль
-// видалити місто
-// додати буль з ключем: like flowers
-// вивести результат в консоль
-let user = {};
-user.name = "kris";
-user.age = 18;
-user.city = "lviv";
-console.log(user);
-delete user.city;
-user['like flowers'] = true;
-console.log(user);
-
-//***10**
-// За допомогою циклу  “for…in” вивести в консоль ключі і значення об*єкта
-for(key in user) {
-    console.log(key);
-    console.log(user[key]);
+if (value > 10) {
+    value = value - 5;
+} else if (value < 5) {
+    value = value + 5;
 }
+
+console.log(value);
+*/
+
+//Зробіть сервіс який отримує число від 1 до 12
+// виведіть місяць який дорівнює числу
+
+let num = Number(prompt("enter number"));
+let month;
+
+switch(num) {
+    case 1:
+        month = "january";
+        console.log(month);
+        break;
+
+    case 2:
+        month = "february";
+        console.log(month);
+        break;
+
+    case 3:
+        month = "march";
+        console.log(month);
+        break;
+
+    case 4:
+        month = "april";
+        console.log(month);
+        break;
+    
+    case 5:
+        month = "may";
+        console.log(month);
+        break;
+
+    case 6:
+        month = "june";
+        console.log(month);
+        break;
+
+    case 7:
+        month = "july";
+        console.log(month);
+        break;
+
+    case 8:
+        month = "august";
+        console.log(month);
+        break;
+
+    case 9:
+        month = "september";
+        console.log(month);
+        break;
+
+    case 10:
+        month = "october";
+        console.log(month);
+        break;
+
+    case 11:
+        month = "november";
+        console.log(month);
+        break;
+
+    case 12:
+        month = "december";
+        console.log(month);
+        break;
+
+    default:
+        console.log("invalid number");
+}
+
+//Зробіть сервіс який отримує тризначне число
+//Поверніть користувачу сумму цих чисел
