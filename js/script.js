@@ -1,108 +1,63 @@
-// Якщо змінна більше нуля - виведіть true, менше - false
-//Перевірте це на варіантах  1, 0, -3.
+//  -- 1 --
+// У вас є масив об’єктів fruts, і в кожному з них є name
+// Напишіть код, який перетворює їх в масив імен.
 /*
-let value = -3;
+const fruts = [
+   { id: 0, name: "Apple" },
+   { id: 1, name: "Tomat" },
+   { id: 2, name: "Cherry" },
+   { id: 3, name: "Orange" },
+];
 
-if (value > 0) {
-    console.log("true");
-} else if (value < 0) {
-    console.log("false");
-} else {
-    console.log("0");
+let result = fruts.map(fruts => fruts.name);
+console.log(result);*/
+
+//  -- 2 --
+//Виведіть парні числа від 2 до 10, використовуючи цикл for.
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let num of arr) {
+    if (num % 2 == 0) {
+        console.log(num);
+    }
 }*/
 
-// Якщо змінна ="test" - виведіть true,
-//Перевірте це на варіантах  'test', "qwerty", true
+//  -- 3 --
+//Замініть цикл "for" на "while"
+// for (let i = 0; i < 5; i++) {
+//     console.lpg( `цифра ${i}!` );
+//   }
 /*
-let value = "aedea";
-value == "test" ? console.log("true") : console.log("false");
+let i = 0;
+while (i < 5) {
+    i++;
+    console.log(`number ${i}!`);
+}
 */
 
-// Якщо змінна більше 10 -  відніміть 5,
-//менше - додайте 5, результат виведіть в консоль
-//Перевірте це на варіантах  1, 10, 13.
+//  -- 4 --
+//Напишіть цикл, який пропонує prompt ввести число більше за 100.
+//Якщо відвідувач введе менше число – попросити ввести ще раз, і так далі.
+//Цикл повинен запитувати число доти, доки відвідувач не введе число,
+// більше за 100, або не скасує ввід/введе порожній рядок.
 /*
-let value = 15;
+let num;
 
-if (value > 10) {
-    value = value - 5;
-} else if (value < 5) {
-    value = value + 5;
-}
-
-console.log(value);
+do {
+    num = prompt("enter number greater than 100");
+} while(num <= 100 && num !== null)
 */
 
-//Зробіть сервіс який отримує число від 1 до 12
-// виведіть місяць який дорівнює числу
+//  -- 5 --
+// Вирахуйте середній вік
 
-let num = Number(prompt("enter number"));
-let month;
+ const girls = [
+   { age: 23, name: "Оля" },
+   { age: 29, name: "Аня" },
+   { age: 10, name: "Юля" },
+   { age: 20, name: "Катя" },
+ ];
 
-switch(num) {
-    case 1:
-        month = "january";
-        console.log(month);
-        break;
-
-    case 2:
-        month = "february";
-        console.log(month);
-        break;
-
-    case 3:
-        month = "march";
-        console.log(month);
-        break;
-
-    case 4:
-        month = "april";
-        console.log(month);
-        break;
-    
-    case 5:
-        month = "may";
-        console.log(month);
-        break;
-
-    case 6:
-        month = "june";
-        console.log(month);
-        break;
-
-    case 7:
-        month = "july";
-        console.log(month);
-        break;
-
-    case 8:
-        month = "august";
-        console.log(month);
-        break;
-
-    case 9:
-        month = "september";
-        console.log(month);
-        break;
-
-    case 10:
-        month = "october";
-        console.log(month);
-        break;
-
-    case 11:
-        month = "november";
-        console.log(month);
-        break;
-
-    case 12:
-        month = "december";
-        console.log(month);
-        break;
-
-    default:
-        console.log("invalid number");
-}
-
-//Зробіть сервіс який отримує тризначне число
-//Поверніть користувачу сумму цих чисел
+ let sum = girls.reduce((summ, item) => summ + item.age, 0) / girls.length;
+ console.log(sum);  
