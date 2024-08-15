@@ -1,140 +1,41 @@
-/*class Bank {
-    static type = "privat";
+class CircleBox {
+    constructor(selector) {
+        this.$el = document.querySelector(selector);
+    }
 
+    hide () {
+        this.$el.style.display = "none";
+    }
+
+    show () {
+        this.$el.style.display = "block";
+    }
+}
+
+class CircleItem extends CircleBox {
     constructor(options) {
-        this.summ = options.summ;
-        this.month = options.month;
-        this.p = options.p;
-    }
-
-    credit() {
-        return console.log("i am privat");
+        super(options.selector);
+        this.$el.style.width = options.size + "px";
+        this.$el.style.height = options.size + "px";
+        this.$el.style.borderRadius = "50%";
+        this.$el.style.backgroundColor = options.color;
     }
 }
 
-const userBank = new Bank({
-    summ: 12000,
-    month: 5,
-    p: 1220,
-});
-
-userBank.credit();
-console.log(user)
-
-
-class NewBank extends Bank {
-    constructor(options){
-        super(options);
-        this.card = options.card;
-    }
-
-    credit () {
-        super.credit();
-        return console.log("i am aval");
-    }
-}
-
-const aval = new NewBank({
-    summ: 12000,
-    month: 5,
-    p: 1220,
-    card: true,
+const circleRed = new CircleItem({
+    selector: "#circleRed", 
+    color: "red",
+    size: 50,
 })
 
-console.log(aval.credit());
-*/
-
-
-/*
-class User {
-    constructor(props) {
-        this.name = props.name;
-    }
-
-    firstName = "";
-    lastName = "";
-    age = "";
-    city = "";
-
-    set name(newName) {
-        const nameRow = newName.split(" ");
-        this.firstName = nameRow[0];
-        this.lastName = nameRow[1];
-    }
-
-    get name() {
-        return ` First name:  ${this.firstName} Last name: ${this.lastName}`;
-    }
-}
-
-const kris = new User ({
-    name: "Khrystyna Mukha",
+const circlePink = new CircleItem({
+    selector: "#circlePink", 
+    color: "pink",
+    size: 80,
 })
 
-const mary = new User ({
-    name: "Mariia Kit",
+const circleOrange = new CircleItem({
+    selector: "#circleOrange", 
+    color: "orange",
+    size: 30,
 })
-
-console.log(kris);
-console.log(mary);
-*/
-
-/*
-const Manager = function (name, sales) {
-    this.name = name;
-    this.sales = sales;    
-}
-
-const ann = new Manager("Anna", 5);
-const mary = new Manager("Mariia", 7);
-
-Manager.prototype.sale = function() {
-    this.sales += 1;
-}
-
-console.dir(Manager);
-*/
-/*
-class CoffeMachine {
-    _water = 0;
-    #waterLimit = 500;
-    constructor(power) {
-        this.power = power;
-    }
-
-    set waterAmount (value) {
-        if (value < 0) {
-            value = 0;
-        }
-        this._water = value;
-    }
-}
-
-let coffeMachine = new CoffeMachine (100);
-
-
-coffeMachine.waterAmount = -20;
-console.log(coffeMachine);
-console.log()*/
-
-class Abonent {
-    constructor(name, number) {
-        this.name = name;
-        this.number = number;
-    }
-
-    set (name, number) {
-        this.name = name;
-        this.number = number;
-    }
-
-    get() {
-        return `name: ${this.name} number: ${this.number}`;
-    }
-}
-
-const user1 = new Abonent("kris", "262674");
-const user2 = new Abonent("ira", "78664");
-const user3 = new Abonent("mary", "79645");
-
-console.log(user1.get());
